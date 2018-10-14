@@ -1,0 +1,21 @@
+function returnChange(amount){
+    let quarters=Math.floor(amount/25);
+    console.log(`You have ${quarters} quarters in your change`);
+    amount=amount%25;
+    console.log(`your remaining amount is : ${amount} cents`);
+
+    let dimes=Math.floor(amount/10);
+    console.log(`You have ${dimes} dimes in your change`);
+    amount=amount%10;
+    console.log(`your remaining amount is : ${amount} cents`);
+
+    let nickels=Math.floor(amount/5);
+    console.log(`You have ${nickels} nickels in your change`);
+    amount=amount%5;
+    console.log(`your remaining amount is : ${amount} cents`);
+
+    let penny=Math.floor(amount/1);
+    console.log(`You have ${penny} pennies in your change`);
+    
+}
+returnChange(10);
