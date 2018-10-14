@@ -1,0 +1,31 @@
+// const example=[
+//     ['bob','john'],
+//     ['banana','Orange'],
+//     ['Hammer','Nail']
+// ];
+// console.log(example[0][1]);
+// let result=example[2][1];
+// console.log(result);
+// example[2][1]='Drywall';
+// console.log(example[2][1]);
+
+let quiz=[
+    ['Best city to live in:','ca'],
+    ['Capital of ca:','sacramento'],
+    ['Best beach city','huntington beach']
+];
+let score=0;
+for(let i=0;i<quiz.length;i++){
+    let answer=prompt(quiz[i][0]);
+    let answerCorrect=answer.toLowerCase().trim();
+
+    if(answerCorrect===quiz[i][1]){
+        alert('correct answer');
+        score++;
+    }else{
+        alert(`wrong answer\nCorrect answer is ${quiz[i][1]}`);
+    }
+
+}
+let correctPercent=((score/quiz.length)*100).toFixed(2);
+alert(`you answered ${score} questions correctly. Your correct percent is ${correctPercent}%`);
