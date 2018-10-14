@@ -1,0 +1,23 @@
+let text='This is some short string';
+let arrText=text.split(' ');
+let secondText=arrText.join(' ');
+console.log(arrText);
+console.log(secondText);
+
+function reverseString(text){
+    let result=text.split('').reverse().join('');
+    console.log(result);
+}
+reverseString("This is some random text");
+
+function findTheLongestWord(sentence){
+    let arr=sentence.split(' ');
+    let longestWord='';
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].length>longestWord.length){
+            longestWord=arr[i];
+        }
+    }
+    console.log(`longest word is ${longestWord}\nlength is ${longestWord.length}`);
+}
+findTheLongestWord("This is some random text");
